@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationTextFieldView" customModule="explore_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="q7d-3e-9jd" id="jm7-zJ-GdC"/>
+                <outlet property="label" destination="Awo-QT-dOg" id="biC-vl-OQ3"/>
+                <outlet property="leadingErrorLabelConstraint" destination="fzD-y2-AkU" id="bR8-mL-X0v"/>
+                <outlet property="leadingStackViewConstraint" destination="JYV-I6-f52" id="iG5-K3-uT9"/>
+                <outlet property="textField" destination="a98-kC-sIm" id="eOJ-WV-nR0"/>
+                <outlet property="trailingErrorLabelConstraint" destination="uZa-e4-9d8" id="l5R-ee-t74"/>
+                <outlet property="trailingStackViewConstraint" destination="5Mv-hy-5Mv" id="WxB-Su-3YZ"/>
+                <outlet property="view" destination="CNF-GJ-c1o" id="seg-ag-EHu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CNF-GJ-c1o">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="d24-Yg-HBK" userLabel="Email Stack View">
+                    <rect key="frame" x="16" y="0.0" width="343" height="37"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-QT-dOg" userLabel="label">
+                            <rect key="frame" x="0.0" y="0.0" width="30.5" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="759" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="a98-kC-sIm" userLabel="textField" customClass="BottomBorderTextField" customModule="explore_ios" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="15" width="343" height="22"/>
+                            <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="a98-kC-sIm" firstAttribute="width" secondItem="d24-Yg-HBK" secondAttribute="width" id="74i-BZ-tOO"/>
+                        <constraint firstAttribute="trailing" secondItem="a98-kC-sIm" secondAttribute="trailing" id="B3g-6A-3H8"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7d-3e-9jd" userLabel="errorLabel">
+                    <rect key="frame" x="16" y="47" width="343" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="d24-Yg-HBK" secondAttribute="trailing" constant="16" id="5Mv-hy-5Mv"/>
+                <constraint firstItem="d24-Yg-HBK" firstAttribute="leading" secondItem="CNF-GJ-c1o" secondAttribute="leading" constant="16" id="JYV-I6-f52"/>
+                <constraint firstItem="q7d-3e-9jd" firstAttribute="top" secondItem="d24-Yg-HBK" secondAttribute="bottom" constant="10" id="ZmT-Gx-sYy"/>
+                <constraint firstItem="d24-Yg-HBK" firstAttribute="top" secondItem="CNF-GJ-c1o" secondAttribute="top" id="aP4-rT-pgB"/>
+                <constraint firstItem="q7d-3e-9jd" firstAttribute="leading" secondItem="CNF-GJ-c1o" secondAttribute="leading" constant="16" id="fzD-y2-AkU"/>
+                <constraint firstAttribute="trailing" secondItem="q7d-3e-9jd" secondAttribute="trailing" constant="16" id="uZa-e4-9d8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="rNI-Aa-AzU"/>
+            <point key="canvasLocation" x="-55.5" y="-98.5"/>
+        </view>
+    </objects>
+</document>
